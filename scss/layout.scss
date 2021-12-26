@@ -1,3 +1,5 @@
+@import "vars";
+
 * {
     margin: 0;
     padding: 0;
@@ -59,14 +61,19 @@ body {
             border-radius: 100%;
             box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
             margin: 0 3px;
+            overflow: hidden;
+            font-weight: 700;
             &.win {
                 background-color: rgb(1, 171, 223);
+                @include longShadow(darken(rgb(1, 171, 223),10), right, 30);
             }
             &.lose {
                 background-color: rgb(207, 0, 0);
+                @include longShadow(darken(rgb(207, 0, 0),10), right, 30);
             }
             &.draw {
                 background-color: rgb(194, 194, 194);
+                @include longShadow(darken(rgb(194, 194, 194),10), right, 30);
             }
         }
     }

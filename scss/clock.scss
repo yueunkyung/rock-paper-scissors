@@ -1,0 +1,16 @@
+@import "vars";
+
+#clock {
+    font-family:"noto sans KR";
+    font-weight: 100;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #111;
+    color: #fff;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include longShadow( darken(#111,10),right,500 );
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/clock.css">
+</head>
+<body>
+    <div id="clock">09:05:08</div>
+    <script>
+        /* const now = new Date();
+        const Clock = document.querySelector("#clock");
+        let hour = now.getHours();
+        let min = now.getMinutes();
+        let sec = now.getSeconds(); */
+        
+        // 함수선언식
+        function aa(){
+            console.log("aaa");
+        }
+        aa();
+        
+        // IIFE 즉시 실행 함수
+        /* (function aa(){
+            console.log("aaa");
+        })() */
+
+
+        // 함수 표현식(expression)
+        /* const kkk = function (){
+            console.log("kkk");
+        } */
+        
+        // 함수 표현식(expression, arrow function)
+        const kkk = () => {
+            console.log("kkk");
+        }
+
+        kkk();
+
+        // setInterval(function(){console.log("zzz")},1000);
+        // setInterval(aa(),1000); // 한번만 호출
+        // setInterval(aa,1000); // setinterval의 1초마다 호출
+
+        // setInterval(kkk,1000); // setinterval의 1초마다 호출
+
+        // const con = console.log("sflkjsaf");
+        // console.log("con",con);
+
+        setInterval(showTime,1000);
+        function addZero(num) {
+            if(num<10) {
+                // `0${num}`;
+                return "0"+num;
+            } else {
+                return num;
+            }
+        }
+        const newNum = addZero(9);
+        console.log(addZero(9));
+        console.log(newNum);
+
+        const bb = console.log(newNum);
+        console.log("bb",bb);
+
+        function showTime() {
+            const now = new Date();
+            const Clock = document.querySelector("#clock");
+            let hour = addZero(now.getHours());
+            let min = addZero(now.getMinutes());
+            let sec = addZero(now.getSeconds());
+            /*
+            if(sec<10){
+                sec = "0"+sec;
+            }
+            if(min<10){
+                min = "0"+min;
+            }
+            if(hour<10){
+                hour = "0"+hour;
+            }
+            */
+
+            clock.textContent = `${hour}:${min}:${sec}`;
+        }
+
+        // clock.textContent = hour+":"+min+":"+sec;
+        // clock.textContent = `${hour}:${min}:${sec}`;
+    </script>
+</body>
+</html>
